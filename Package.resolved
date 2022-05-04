@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "development-support",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/GPretadoR/Development-Support.git",
+      "state" : {
+        "revision" : "79aa108a3f05feeb9f1cc7f52eba04e42ec24b93",
+        "version" : "1.0.0"
+      }
+    }
+  ],
+  "version" : 2
+}

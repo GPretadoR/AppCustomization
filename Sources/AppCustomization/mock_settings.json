@@ -1,0 +1,10 @@
+{
+    "texts": {
+        "someTextTitle": "Title text is 1",
+        "someOtherTitleText": "Other text is 1"
+    },
+    "colors": {
+        "topBarColor": "EEAA11",
+        "otherBarColor": "0022CC"
+    }
+}
