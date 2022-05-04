@@ -54,38 +54,39 @@ enum TextsStyles {
     }
 
     private func style(for style: TextsStyles) -> TextAttributes {
-        switch style {
-        case .none:
-            return TextAttributes(font: defaultFont, textColor: .white)
-        case .bold10px,
-             .bold11px,
-             .bold12px,
-             .bold13px,
-             .bold14px,
-             .bold15px,
-             .bold16px,
-             .bold18px,
-             .bold20px,
-             .bold24px,
-             .bold30px,
-             .bold36px,
-             .bold40px:
-            return styleBold(style: style)
-        case .medium40px:
-            return styleMedium(style: style)
-        case .regular9px,
-             .regular11px,
-             .regular12px,
-             .regular13px,
-             .regular14px,
-             .regular15px,
-             .regular16px,
-             .regular18px,
-             .regular20px:
-            return styleRegular(style: style)
-        }
+        return TextAttributes(font: defaultFont)
+//        switch style {
+//        case .none:
+//            return TextAttributes(font: defaultFont, textColor: .white)
+//        case .bold10px,
+//             .bold11px,
+//             .bold12px,
+//             .bold13px,
+//             .bold14px,
+//             .bold15px,
+//             .bold16px,
+//             .bold18px,
+//             .bold20px,
+//             .bold24px,
+//             .bold30px,
+//             .bold36px,
+//             .bold40px:
+//            return styleBold(style: style)
+//        case .medium40px:
+//            return styleMedium(style: style)
+//        case .regular9px,
+//             .regular11px,
+//             .regular12px,
+//             .regular13px,
+//             .regular14px,
+//             .regular15px,
+//             .regular16px,
+//             .regular18px,
+//             .regular20px:
+//            return styleRegular(style: style)
+//        }
     }
-
+    /*
     private func styleBold(style: TextsStyles) -> TextAttributes {
         switch style {
         case .bold10px:
@@ -273,6 +274,7 @@ enum TextsStyles {
         let font = R.font.sfProTextRegular(size: 40) ?? defaultFont
         return TextAttributes(font: font)
     }
+     */
 }
 
 extension TextsStyles {
