@@ -9,8 +9,8 @@
 import UIKit
 
 public struct TextAttributes {
-    var font: UIFont
-    var textColor: UIColor?
+    public var font: UIFont
+    public var textColor: UIColor?
 }
 
 public enum TextsStyles {

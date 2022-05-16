@@ -10,15 +10,15 @@ import Foundation
 
 public class AppTexts {
 
-    class func string(string: String) -> String {
+    public static func string(string: String) -> String {
         return AppTexts.string(string: string, key: nil)
     }
 
-    class func string(string: String, key: String?) -> String {
+    public static func string(string: String, key: String?) -> String {
         return AppTexts.string(string: string, key: key, sourceLocal: true) // Local is default here. It can be changes, using some mechanisms
     }
 
-    class func string(string: String, key: String?, sourceLocal: Bool) -> String {
+    public static func string(string: String, key: String?, sourceLocal: Bool) -> String {
         let textsDict = textsSource(local: sourceLocal)
         if let key = key, let value = textsDict[key] {
             return value
@@ -26,7 +26,7 @@ public class AppTexts {
         return string
     }
 
-    private class func textsSource(local: Bool) -> [String: String] {
+    private static func textsSource(local: Bool) -> [String: String] {
         return local ? ResourcesProvider.local.settings?["texts"] as? [String: String] ?? ["": ""] : ResourcesProvider.shared.settings?["texts"] as? [String: String] ?? ["": ""]
     }
 }
