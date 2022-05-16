@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/GPretadoR/Development-Support.git",
       "state" : {
-        "revision" : "f8c46155fa99874cf1d579b45951cbdc5608b469",
-        "version" : "1.0.1"
+        "branch" : "master",
+        "revision" : "2c2b4b3de1b03e64cd16b6fea9d6ae319df3ce44"
       }
     }
   ],
