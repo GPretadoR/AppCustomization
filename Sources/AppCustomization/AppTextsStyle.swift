@@ -8,12 +8,12 @@
 
 import UIKit
 
-struct TextAttributes {
+public struct TextAttributes {
     var font: UIFont
     var textColor: UIColor?
 }
 
-enum TextsStyles {
+public enum TextsStyles {
     case none
 
     // Bold

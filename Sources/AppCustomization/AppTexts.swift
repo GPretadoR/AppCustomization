@@ -8,7 +8,7 @@
 
 import Foundation
 
-class AppTexts {
+public class AppTexts {
 
     class func string(string: String) -> String {
         return AppTexts.string(string: string, key: nil)
