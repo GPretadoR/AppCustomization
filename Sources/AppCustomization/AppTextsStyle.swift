@@ -277,7 +277,7 @@ public enum TextsStyles {
      */
 }
 
-extension TextsStyles {
+public extension TextsStyles {
     init?(style: TextsStyles) {
         self = style
     }
