@@ -49,7 +49,7 @@ public enum TextsStyles {
         UIFont.systemFont(ofSize: 17)
     }
 
-    var style: TextAttributes {
+    public var style: TextAttributes {
         return style(for: self)
     }
 
