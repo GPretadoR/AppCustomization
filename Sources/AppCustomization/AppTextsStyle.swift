@@ -11,9 +11,9 @@ import UIKit
 
 public struct FontAppearance {
     @CodableUserDefault(key: "fonts", defaultValue: [.none : ""])
-    static var fontStyles: [FontWeight : String]
+    public static var fontStyles: [FontWeight : String]
 
-    enum FontWeight: String, Codable {
+    public enum FontWeight: String, Codable {
         case bold
         case regular
         case medium
