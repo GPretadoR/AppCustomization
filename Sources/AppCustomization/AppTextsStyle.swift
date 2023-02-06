@@ -15,8 +15,9 @@ public struct FontAppearance {
 
     public enum FontWeight: String, Codable {
         case bold
-        case regular
         case medium
+        case regular
+        case light
         case none
     }
 }
@@ -32,6 +33,7 @@ public enum TextsStyles {
     case bold(CGFloat)
     case medium(CGFloat)
     case regular(CGFloat)
+    case light(CGFloat)
 
     private var defaultFont: UIFont {
         UIFont.systemFont(ofSize: 17)
@@ -57,6 +59,12 @@ public enum TextsStyles {
             return TextAttributes(font: font)
         case .regular(let size):
             guard let fontName = FontAppearance.fontStyles[.regular],
+                    let font = UIFont(name: fontName, size: size)
+            else { return TextAttributes(font: defaultFont) }
+
+            return TextAttributes(font: font)
+        case .light(let size):
+            guard let fontName = FontAppearance.fontStyles[.light],
                     let font = UIFont(name: fontName, size: size)
             else { return TextAttributes(font: defaultFont) }
 
