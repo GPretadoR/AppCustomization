@@ -44,25 +44,24 @@ public enum TextsStyles {
         case .bold(let size):
             guard let fontName = FontAppearance.fontStyles[.bold],
                     let font = UIFont(name: fontName, size: size)
-            else { return TextAttributes(font: UIFont.systemFont(ofSize: size)) }
-
+            else { return TextAttributes(font: UIFont.systemFont(ofSize: size, weight: .bold)) }
             return TextAttributes(font: font)
         case .medium(let size):
             guard let fontName = FontAppearance.fontStyles[.medium],
                     let font = UIFont(name: fontName, size: size)
-            else { return TextAttributes(font: UIFont.systemFont(ofSize: size)) }
+            else { return TextAttributes(font: UIFont.systemFont(ofSize: size, weight: .medium)) }
 
             return TextAttributes(font: font)
         case .regular(let size):
             guard let fontName = FontAppearance.fontStyles[.regular],
                     let font = UIFont(name: fontName, size: size)
-            else { return TextAttributes(font: UIFont.systemFont(ofSize: size)) }
+            else { return TextAttributes(font: UIFont.systemFont(ofSize: size, weight: .regular)) }
 
             return TextAttributes(font: font)
         case .light(let size):
             guard let fontName = FontAppearance.fontStyles[.light],
                     let font = UIFont(name: fontName, size: size)
-            else { return TextAttributes(font: UIFont.systemFont(ofSize: size)) }
+            else { return TextAttributes(font: UIFont.systemFont(ofSize: size, weight: .light)) }
 
             return TextAttributes(font: font)
         default:
