@@ -35,10 +35,6 @@ public enum TextsStyles {
     case regular(CGFloat)
     case light(CGFloat)
 
-    private var defaultFont: UIFont {
-        UIFont.systemFont(ofSize: 17)
-    }
-
     public var style: TextAttributes {
         return style(for: self)
     }
@@ -48,29 +44,29 @@ public enum TextsStyles {
         case .bold(let size):
             guard let fontName = FontAppearance.fontStyles[.bold],
                     let font = UIFont(name: fontName, size: size)
-            else { return TextAttributes(font: defaultFont) }
+            else { return TextAttributes(font: UIFont.systemFont(ofSize: size)) }
 
             return TextAttributes(font: font)
         case .medium(let size):
             guard let fontName = FontAppearance.fontStyles[.medium],
                     let font = UIFont(name: fontName, size: size)
-            else { return TextAttributes(font: defaultFont) }
+            else { return TextAttributes(font: UIFont.systemFont(ofSize: size)) }
 
             return TextAttributes(font: font)
         case .regular(let size):
             guard let fontName = FontAppearance.fontStyles[.regular],
                     let font = UIFont(name: fontName, size: size)
-            else { return TextAttributes(font: defaultFont) }
+            else { return TextAttributes(font: UIFont.systemFont(ofSize: size)) }
 
             return TextAttributes(font: font)
         case .light(let size):
             guard let fontName = FontAppearance.fontStyles[.light],
                     let font = UIFont(name: fontName, size: size)
-            else { return TextAttributes(font: defaultFont) }
+            else { return TextAttributes(font: UIFont.systemFont(ofSize: size)) }
 
             return TextAttributes(font: font)
         default:
-            return TextAttributes(font: defaultFont)
+            return TextAttributes(font: UIFont.systemFont(ofSize: 17))
         }
     }
 }
